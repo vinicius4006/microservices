@@ -60,7 +60,6 @@ func (app *Config) authenticate(w http.ResponseWriter, a AuthPayload) {
 		app.errorJSON(w, err)
 		return
 	}
-
 	client := &http.Client{}
 	response, err := client.Do(request)
 	if err != nil {
